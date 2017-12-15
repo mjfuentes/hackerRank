@@ -83,27 +83,27 @@ public class FindTheRunningMedian {
 		}
 		
 		void siftDown(int index) {
-            int leftIndex, rightIndex, maxIndex, tmp;
-            leftIndex = (index*2)+1;
-            rightIndex = (index*2)+2;
-            if (rightIndex >= size) {
-                if (leftIndex >= size)
-                        return;
-                  else
-                	  maxIndex = leftIndex;
-            } else {
-                  if (elements[leftIndex] >= elements[rightIndex])
-                	  maxIndex = leftIndex;
-                  else
-                	  maxIndex = rightIndex;
-            }
-            if (elements[index] < elements[maxIndex]) {
-                  tmp = elements[maxIndex];
-                  elements[maxIndex] = elements[index];
-                  elements[index] = tmp;
-                  siftDown(maxIndex);
-            }
-      }
+			int leftIndex, rightIndex, maxIndex, tmp;
+			leftIndex = (index*2)+1;
+			rightIndex = (index*2)+2;
+			if (rightIndex >= size) {
+			    if (leftIndex >= size)
+			            return;
+			      else
+			    	  maxIndex = leftIndex;
+			} else {
+			      if (elements[leftIndex] >= elements[rightIndex])
+			    	  maxIndex = leftIndex;
+			      else
+			    	  maxIndex = rightIndex;
+			}
+			if (elements[index] < elements[maxIndex]) {
+			      tmp = elements[maxIndex];
+			      elements[maxIndex] = elements[index];
+			      elements[index] = tmp;
+			      siftDown(maxIndex);
+			}
+		}
 		
 		int peekTop(){
 			return elements[0];
