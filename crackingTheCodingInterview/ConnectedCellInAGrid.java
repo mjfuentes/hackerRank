@@ -24,6 +24,7 @@ public class ConnectedCellInAGrid {
 		isVisited[y][x] = true;
 		
 		int total = 0;
+		
 		total += getSize(matrix,isVisited,y-1,x-1);
 		total += getSize(matrix,isVisited,y-1,x);
 		total += getSize(matrix,isVisited,y-1,x+1);
